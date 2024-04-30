@@ -22,6 +22,11 @@ set_target_properties(${SDK_LIBRARY_STATIC} #${SDK_LIBRARY_SHARED}
         PUBLIC_HEADER "${LIVOX_API_HEADER}"
         )
 
+set_target_properties(${SDK_LIBRARY_STATIC} ${SDK_LIBRARY_SHARED}
+        PROPERTIES
+        VERSION "${LIVOX_SDK_VERSION_STRING}"
+        )
+
 if(WIN32)
   set(PLATFORM win)
 else(WIN32)
